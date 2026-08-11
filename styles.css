@@ -49,8 +49,8 @@ a:hover { color:var(--gold); text-decoration:underline; }
   filter:invert(1) brightness(1.08); }
 .hook { font-family:var(--serif); font-weight:400; font-size:clamp(26px,3.2vw,42px); line-height:1.22;
   margin:clamp(26px,3vw,36px) 0 0; }
-.subhook { font-family:var(--serif); font-size:clamp(15px,1.85vw,26px); line-height:1.45; margin-top:16px;
-  white-space:nowrap; color:rgba(32,31,29,.72); }
+.subhook { font-family:var(--serif); font-size:clamp(20px,2.1vw,28px); line-height:1.4; margin-top:16px;
+  max-width:38ch; }
 .hero-sub { font-size:19px; line-height:1.75; max-width:44ch; margin:clamp(26px,3vw,34px) 0 0;
   color:rgba(247,245,243,.88); }
 .hero-cta { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:clamp(30px,4vw,40px); }
@@ -85,7 +85,19 @@ a:hover { color:var(--gold); text-decoration:underline; }
 .foot { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px; border-top:1px solid var(--rule);
   padding-top:28px; padding-bottom:44px; font-size:14px; line-height:1.8; color:rgba(32,31,29,.7); }
 
-/* praise rail */
+/* praise */
+.book-body { margin-top:clamp(28px,3.2vw,40px); }
+.book-body::after { content:''; display:block; clear:both; }
+.book-mark { float:right; width:clamp(180px,24vw,300px); margin:4px 0 24px clamp(28px,4vw,56px); }
+.book-mark img { display:block; width:100%; height:auto; }
+.praise-featured { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:clamp(28px,4vw,52px); margin-top:clamp(30px,3.6vw,46px); }
+.praise-featured article { border-top:1px solid var(--rule); padding-top:24px; }
+.fq { font-family:var(--serif); font-size:clamp(19px,1.7vw,22px); line-height:1.5; }
+.praise-featured .name { margin-top:22px; }
+.praise-featured .role { margin-top:2px; }
+.praise-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(24px,3vw,36px); }
+.praise-grid .card { flex:initial; }
 .praise { padding-top:clamp(30px,3.4vw,48px); padding-bottom:clamp(36px,4vw,56px); }
 .praise-head { display:flex; flex-wrap:wrap; gap:20px 48px; align-items:flex-end; justify-content:space-between; }
 .rail { display:flex; gap:24px; overflow-x:auto; scroll-snap-type:x mandatory;
