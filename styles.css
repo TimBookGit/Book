@@ -141,3 +141,5 @@ footer .wrap { display:flex; flex-wrap:wrap; gap:20px 48px; justify-content:spac
   .cover { width:min(560px,100%); margin:0 auto; }
   .sec { gap:20px; }
 }
+
+.nav-brand img { display:block; height:20px; width:auto; max-width:60vw; }
