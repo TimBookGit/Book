@@ -147,3 +147,7 @@ footer .wrap { display:flex; flex-wrap:wrap; gap:20px 48px; justify-content:spac
 .btn-outline-light { border:1px solid rgba(255,255,255,.45); background:transparent; color:#fbfaf8; }
 .btn-outline-light:hover { border-color:rgba(255,255,255,.9); }
 .buy-link { color:var(--accent-dark, #8f6224); text-decoration:underline; text-underline-offset:3px; }
+
+.follow { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 20px; margin-top:26px; padding-top:22px; border-top:1px solid var(--rule); }
+.follow-label { font-size:13px; letter-spacing:.12em; text-transform:uppercase; opacity:.62; }
+.follow a { font-size:16px; text-decoration:underline; text-underline-offset:3px; }
