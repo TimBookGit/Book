@@ -107,8 +107,8 @@
       </div>
     </div>
     <div>
-      <form class="form" action="https://app.kit.com/forms/9859541/subscriptions" method="post">
-        <input class="input" type="email" name="email_address" required placeholder="you@example.com" aria-label="Email address" />
+      <form class="form" id="kit-form" action="https://buttondown.com/api/emails/embed-subscribe/SymbolismsNews" method="post">
+        <input class="input" type="email" name="email" required placeholder="you@example.com" aria-label="Email address" />
         <button class="btn btn-solid" type="submit">Join the list</button>
       </form>
       <div style="margin-top:24px">
@@ -129,5 +129,30 @@
     <a href="mailto:info@thesymbolswecarry.com" class="foot-email">info@thesymbolswecarry.com</a>
   </div>
 </footer>
+<div class="modal" id="kit-thanks" hidden>
+  <div class="modal-card">
+    <p class="kicker" style="margin:0">You are on the list</p>
+    <p class="lead" style="font-size:26px; margin:16px 0 0">Thank you for joining.</p>
+    <p class="body" style="font-size:16px; margin:14px 0 0">Check your inbox for a confirmation email. Event dates and news will follow, nothing else.</p>
+    <button class="btn btn-solid" type="button" id="kit-close" style="margin-top:28px">Close</button>
+  </div>
+</div>
+<script>
+(function () {
+  var form = document.getElementById('kit-form');
+  var modal = document.getElementById('kit-thanks');
+  if (!form || !modal) return;
+  function show() { modal.hidden = false; }
+  function hide() { modal.hidden = true; }
+  document.getElementById('kit-close').addEventListener('click', hide);
+  modal.addEventListener('click', function (e) { if (e.target === modal) hide(); });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'cors' })
+      .then(function () { form.reset(); show(); })
+      .catch(function () { form.reset(); show(); });
+  });
+})();
+</script>
 </body>
 </html>
