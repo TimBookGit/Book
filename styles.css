@@ -143,3 +143,7 @@ footer .wrap { display:flex; flex-wrap:wrap; gap:20px 48px; justify-content:spac
 }
 
 .nav-brand img { display:block; height:20px; width:auto; max-width:60vw; }
+
+.btn-outline-light { border:1px solid rgba(255,255,255,.45); background:transparent; color:#fbfaf8; }
+.btn-outline-light:hover { border-color:rgba(255,255,255,.9); }
+.buy-link { color:var(--accent-dark, #8f6224); text-decoration:underline; text-underline-offset:3px; }
