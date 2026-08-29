@@ -151,3 +151,7 @@ footer .wrap { display:flex; flex-wrap:wrap; gap:20px 48px; justify-content:spac
 .follow { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 20px; margin-top:26px; padding-top:22px; border-top:1px solid var(--rule); }
 .follow-label { font-size:13px; letter-spacing:.12em; text-transform:uppercase; opacity:.62; }
 .follow a { font-size:16px; text-decoration:underline; text-underline-offset:3px; }
+
+.kit-alert { list-style:none; margin:12px 0 0; padding:0; font-size:14px; color:#8f2f14; }
+.kit-alert:empty { display:none; }
+.formkit-form .formkit-spinner { display:none; }
